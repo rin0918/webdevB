@@ -29,8 +29,16 @@ $people2 = [
     ['name'=>'小林','blood'=>'B'],
 ];
 #全員の血液型のみを表示
+// foreach($people2 as $person){
+//     echo $person['blood'] . "<br>";
+// }
+
 foreach($people2 as $person){
-    echo $person['blood'] . "<br>";
+    foreach($person as $key => $value){
+        if($key == 'blood'){
+            echo $value . "<br>";
+        }
+    }
 }
 
 
